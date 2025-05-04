@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+*{
+    font-family: 'Inter',sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  opacity: 0.4;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: blobFloat 20s ease-in-out infinite;
+  z-index: 0;
+}
+
+.blob1 {
+  top: -100px;
+  left: -100px;
+  background: #ff9a9e;
+}
+
+.blob2 {
+  bottom: -100px;
+  right: -100px;
+  background: #a1c4fd;
+}
+
+.blob3 {
+  top: 50%;
+  left: 50%;
+  background: #c2ffd8;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes blobFloat {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.1) translate(20px, 30px); }
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-15px) rotate(5deg) scale(1.05); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+.bg-icon {
+  position: absolute;
+  opacity: 0.15;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  animation: floatImage 10s ease-in-out infinite;
+  z-index: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.bg-icon0 { top: 10%; left: 15%; animation-delay: 0s; }
+.bg-icon1 { top: 25%; right: 10%; animation-delay: 2s; }
+.bg-icon2 { bottom: 20%; left: 10%; animation-delay: 4s; }
+.bg-icon3 { top: 60%; left: 50%; animation-delay: 1s; }
+.bg-icon4 { bottom: 10%; right: 20%; animation-delay: 3s; }
+.bg-icon5 { top: 30%; right: 35%; animation-delay: 5s; }
+
+@keyframes loop-left {
+    0% { transform: translateX(-100%); opacity: 0; }
+    20% { transform: translateX(0); opacity: 0.4; }
+    80% { transform: translateX(10%); opacity: 0.4; }
+    100% { transform: translateX(100%); opacity: 0; }
+  }
+  
+  /* Same for other directions (update timing) */
+  @keyframes loop-right {
+    0% { transform: translateX(100%); opacity: 0; }
+    20% { transform: translateX(0); opacity: 0.4; }
+    80% { transform: translateX(-10%); opacity: 0.4; }
+    100% { transform: translateX(-100%); opacity: 0; }
+  }
+  
+  @keyframes loop-top {
+    0% { transform: translateY(-100%); opacity: 0; }
+    20% { transform: translateY(0); opacity: 0.4; }
+    80% { transform: translateY(10%); opacity: 0.4; }
+    100% { transform: translateY(100%); opacity: 0; }
+  }
+  
+  @keyframes loop-bottom {
+    0% { transform: translateY(100%); opacity: 0; }
+    20% { transform: translateY(0); opacity: 0.4; }
+    80% { transform: translateY(-10%); opacity: 0.4; }
+    100% { transform: translateY(-100%); opacity: 0; }
+  }
+  
+  @keyframes loop-top-left {
+    0% { transform: translate(-100%, -100%); opacity: 0; }
+    20% { transform: translate(0, 0); opacity: 0.4; }
+    80% { transform: translate(10%, 10%); opacity: 0.4; }
+    100% { transform: translate(100%, 100%); opacity: 0; }
+  }
+  
+  @keyframes loop-bottom-right {
+    0% { transform: translate(100%, 100%); opacity: 0; }
+    20% { transform: translate(0, 0); opacity: 0.4; }
+    80% { transform: translate(-10%, -10%); opacity: 0.4; }
+    100% { transform: translate(-100%, -100%); opacity: 0; }
+  }
+  
+  .animate-loop-left         { animation: loop-left 6s ease-in-out infinite; }
+  .animate-loop-right        { animation: loop-right 6s ease-in-out infinite; }
+  .animate-loop-top          { animation: loop-top 6s ease-in-out infinite; }
+  .animate-loop-bottom       { animation: loop-bottom 6s ease-in-out infinite; }
+  .animate-loop-top-left     { animation: loop-top-left 6s ease-in-out infinite; }
+  .animate-loop-bottom-right { animation: loop-bottom-right 6s ease-in-out infinite; }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: scale(1.02);
+    }
+    to {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 2s ease-in-out;
+  }
+  
