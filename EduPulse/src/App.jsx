@@ -5,12 +5,12 @@ import Home from './components/Home';
 import Login from './components/Login';
 import SignUp from './components/Signup';
 import Navbar from './components/Navbar'
-import About from './components/About/about';
+import About from './components/About/About'
 import Contacts from './components/Contacts/Contacts';
 import Tdashboard from './components/Teacher/Tdashboard';
 import Feature from './components/Features/Feature';
 import Sdashboard from './components/Student/Sdashboard';
-import Demo from './components/demo';
+import Demo from './components/Demo';
 import TeachersRatingRank from './components/TeachersRatingRank';
 import Pricing from './components/Pricing';
 
@@ -43,3 +43,4 @@ function App() {
 }
 
 export default App;
+
